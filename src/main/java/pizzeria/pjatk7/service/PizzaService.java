@@ -1,19 +1,17 @@
 package pizzeria.pjatk7.service;
 
 import org.springframework.stereotype.Service;
-import pizzeria.pjatk7.database.PizzaRepository;
-import pizzeria.pjatk7.model.Pizza;
+import pizzeria.pjatk7.enums.Toppings;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class PizzaService {
-    private final PizzaRepository pizzaRepository;
+    private List<Toppings> toppings = new ArrayList<Toppings>(Arrays.asList(Toppings.values()));
 
-    public PizzaService(PizzaRepository pizzaRepository)
-    {
-        this.pizzaRepository = pizzaRepository;
-    }
-
-    public Pizza BasicPizza() {
-        return null;
+    public String GetListOfToppings() {
+        return Arrays.toString(toppings.toArray());
     }
 }

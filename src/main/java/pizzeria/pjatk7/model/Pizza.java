@@ -1,7 +1,7 @@
 package pizzeria.pjatk7.model;
 
 import pizzeria.pjatk7.enums.Size;
-
+import pizzeria.pjatk7.enums.Toppings;
 import java.util.List;
 
 public class Pizza {
@@ -22,6 +22,14 @@ public class Pizza {
         this.basePrice = basePrice;
         this.toppings = toppings;
         this.size = size;
+    }
+
+    public void setToppings(List<Toppings> toppings) {
+        this.toppings = toppings;
+    }
+
+    public List<Toppings> getToppings() {
+        return toppings;
     }
 
     public Integer getId() {
@@ -46,14 +54,6 @@ public class Pizza {
 
     public void setBasePrice(Double basePrice) {
         this.basePrice = basePrice;
-    }
-
-    public List<Toppings> getToppings() {
-        return toppings;
-    }
-
-    public void setToppings(List<Toppings> toppings) {
-        this.toppings = toppings;
     }
 
     public Size getSize() {
